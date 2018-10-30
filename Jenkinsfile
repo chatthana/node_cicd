@@ -2,9 +2,9 @@ node {
   stage('test') {
     agent {
       docker { image 'node:carbon' }
-      steps {
+    }
+    steps {
         sh 'node -v'
       }
-    }
   }
 }
