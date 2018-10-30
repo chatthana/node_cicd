@@ -1,10 +1,10 @@
 node {
-  agent {
-    docker { image 'node:carbon' }
-  }
-  stages {
-    stage('Install dependencies') {
-      sh 'yarn'
+  stage('test') {
+    agent {
+      docker { image 'node:carbon' }
+      steps {
+        sh 'node -v'
+      }
     }
   }
 }
